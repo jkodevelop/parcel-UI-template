@@ -35,3 +35,6 @@ using: **posthtml-include** package, this allows for html template includes
 ``` example
 <include src="./htmltpl/header-tpl.html"></include>
 ```
+
+
+browser-sync start --proxy "localhost:1234" --files "dist/*.*"

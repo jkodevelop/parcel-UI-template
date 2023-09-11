@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "postsync": "browser-sync start --proxy \"localhost:1234\" --files \"dist/*.*\"",
+    "dev": "npm start | npm run postsync",
+    "windev": "start npm start & start npm run postsync",
+    "pwindev": "start pnpm start & start pnpm run postsync"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "2.9.3",
+    "browser-sync": "^2.29.3",
     "parcel": "^2.9.3",
     "posthtml-include": "^1.7.4"
   },
