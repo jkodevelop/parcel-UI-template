@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
     "postsync": "browser-sync start --proxy \"localhost:1234\" --files \"dist/*.*\"",
     "dev": "npm start | npm run postsync",

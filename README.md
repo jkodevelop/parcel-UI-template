@@ -19,10 +19,21 @@ npm start
 npm run build
 ```
 
+3. start browser-sync (open new terminal)
+```
+browser-sync start --proxy "localhost:1234" --files "dist/*.*"
+```
+
 ## starting point
 ```
 ./src/index.html
 ```
+
+## parcel notes
+```
+parcel src/index.html --open
+```
+option `--open` opens default browser when starting
 
 ## additional note
 ```
@@ -35,6 +46,3 @@ using: **posthtml-include** package, this allows for html template includes
 ``` example
 <include src="./htmltpl/header-tpl.html"></include>
 ```
-
-
-browser-sync start --proxy "localhost:1234" --files "dist/*.*"
