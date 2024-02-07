@@ -46,3 +46,63 @@ using: **posthtml-include** package, this allows for html template includes
 ``` example
 <include src="./htmltpl/header-tpl.html"></include>
 ```
+
+# adding tailwindcss
+
+source:
+https://tailwindcss.com/docs/guides/parcel
+
+1. install tailwindcss and postcss
+
+```
+npm install -D tailwindcss
+npm install -D postcss
+```
+
+2. add .postcssrc
+
+3. path to source in "content" in tailwind.config.js
+
+4. add directive to main CSS file
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. use tailwind css classes
+https://tailwindcomponents.com/cheatsheet/
+
+## How do I use tailwindcss with SASS/SCSS
+
+source:
+https://stackoverflow.com/questions/76233402/how-to-use-scss-with-tailwind-css
+
+**note: sample config below assumes all code files are somewhere inside a folder named "src" under project's root.**
+
+```
+[label tailwind.config.js]
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  mode: "jit",
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+  content: [
+    "./src/**/*.{html,js,ts,jsx,tsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```

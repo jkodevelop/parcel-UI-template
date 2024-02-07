@@ -1,5 +1,9 @@
-$bgcolor: green;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'vars.scss';
 
 body{
-  background-color: $bgcolor;	
+  background-color: $bg;	
 }
