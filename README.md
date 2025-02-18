@@ -1,4 +1,4 @@
-# Quick UI Template [2023]
+# Quick UI Template [2025]
 This project can used for quick template generations with a little bit of help, useful for prototyping.
 Using **PARCEL** as the bundler and builder for development purposes.
 
