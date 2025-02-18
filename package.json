@@ -2,10 +2,10 @@
   "name": "parcel-UI-TEMPLATE",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+   "source": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
+    "build": "parcel build --public-url ./ --dist-dir dist",
     "postsync": "browser-sync start --proxy \"localhost:1234\" --files \"dist/*.*\"",
     "dev": "npm start | npm run postsync",
     "windev": "start npm start & start npm run postsync",
@@ -15,9 +15,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-sass": "^2.13.3",
     "browser-sync": "^2.29.3",
-    "parcel": "^2.11.0",
+    "parcel": "^2.13.3",
     "posthtml-include": "^1.7.4"
   },
   "dependencies": {
