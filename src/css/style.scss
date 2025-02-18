@@ -1,9 +1,13 @@
+@use "sass:meta";
+@use "vars.scss";
+// @include meta.load-css('vars.scss'); // what is this?
+// if not using: @user "vars.scss" as *, then variables does not need namespace <filename>.$VariableName
+// example: color:vars.$bg to just color:$bg
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'vars.scss';
-
 body{
-  background-color: $bg;	
+  background-color: vars.$bg;	
 }
